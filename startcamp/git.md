@@ -46,11 +46,13 @@ SSAFY(SSAFY, 싸피 단어 포함) 자료는 **절대** Github **public**에 올
 
 관통프로젝트 자료 업로드 시 주의! - 만약 연락 받는다면 무조건 내리거나 개인 전환
 
+
+
+
+
 GitBash에서 TIL 폴더 git연동
 
-TIL 폴더에서 우클릭 => gitbash 열기 => bash에서 `git init`입력
-
-
+TIL 폴더에서 우클릭 => gitbash 열기 => bash에서 `git init`입력 => 아래 3개 공간이 생성됨
 
 git의 3가지 공간
 
@@ -60,10 +62,52 @@ git의 3가지 공간
 
 ​	ㄴStaging Area - 업로드 전 확인/검수하는 공간 (불필요한게 있나? 빠진건 없나?)
 
-Working directory : 실제 폴더를 참조해 변화된 내용이 있는 파일만 가져옴
+Working directory : 실제 폴더를 참조해 변화된 내용을 가져옴
 
 working directory => Staging Area : git add
 
 Staging Area => Local Repository : git commit => ver1 생성
 
-변경사항 발생 => Working directory가 참조 => Staging Area에서 검수 => Local Repository => ver2 생성 및 git은 이제 ver2 참조
+변경사항 발생 => Working directory가 추적 => Staging Area에서 검수 => Local Repository => ver2 생성 및 git은 이제 ver2 참조
+
+
+
+git의 상태
+
+git status : Working directory와 Staging Area 상태보기
+
+* untracked : 처음으로 관리되는 대상(새로 생성 등)이 working directory에 있는 상태 
+
+  staging area에 올라가기 전
+
+  빨간색으로 파일/폴더 표시 => Staging area 에 올리면 녹색 됨
+
+* tracked : 관리되고 있는 대상 (Staging Area에 올라간 이력이 있는 파일)
+  * modified : 수정 중인 파일, 녹색
+  * unmodified : 별도 색 X
+
+git log : commit된 사항 확인
+
+markdown은 이미지를 다른 장소(asset에 저장하고 상대위치로 가져옴 - 경로 바뀌면 이미지 안나옴, git 업로드 시 사진파일 있는 폴더와 markdown 함께 올려야 함
+
+
+
+최초 업로드 
+
+git config --global user.email 가입메일
+
+git config --global user.name 깃내 닉네임
+
+커밋 후 텍스트 에디터 뜸 - 변경이유 기록을 위한 창 - i 누르기 - 아랫줄에 이유 입력(#주석 지워야함) - esc 누르기 - :wq이력 후 엔터
+
+
+
+더 쉽게 commit하는 방법
+
+git commit -m '변경이유'
+
+git log : commit 해쉬정보, 업로드 한 사람 이름, 날짜, 이유 출력됨
+
+
+
+.git 폴더를 지우면? - 여태 관리하던 git 과의 연동이 끊김 (master)도 사라짐 - 왜냐하면 local에만 업로드, github사이트에 업로드 X // 편집한지 얼마 안됐거나 지워도 되는 경우 외엔 함부로 삭제 금지
