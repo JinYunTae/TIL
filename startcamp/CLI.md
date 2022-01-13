@@ -169,7 +169,7 @@ $ code . : 현재 폴더에서 비주얼 코드를 엶
 
 * VS code에서 사용하기
 
-초기설정 :  상단 terminal 탭 => new terminal => 우측하단의  +옆에 있는 ˘클릭 => 맨 아래 기본프로필 클릭 => 상단의 목록 중 gitbash 선택
+**초기설정** :  상단 terminal 탭 => new terminal => 우측하단의  +옆에 있는 ˘클릭 => 맨 아래 기본프로필 클릭 => 상단의 목록 중 gitbash 선택
 
 kill terminal 해야지만 프로그램 종료됨
 

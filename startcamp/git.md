@@ -117,3 +117,30 @@ git log : commit 해쉬정보, 업로드 한 사람 이름, 날짜, 이유 출�
 
 
 .git 폴더를 지우면? - 여태 관리하던 git 과의 연동이 끊김 (master)도 사라짐 - 왜냐하면 local에만 업로드, github사이트에 업로드 X // 편집한지 얼마 안됐거나 지워도 되는 경우 외엔 함부로 삭제 금지
+
+* github에 올리려면 
+
+  1. 원격 저장소 정보 등록(url)
+
+     ```bash
+     git remote add origin https://github.com/닉네임/TIL.git
+     ```
+
+     .git은 생략가능, origin(컨벤션)은 remote 별명 - 내가 메인으로 쓰는 repository가 저장됨
+
+     
+
+  2. 업로드 할 내용을 push한다.
+
+     ```bash
+     git push -u origin master
+     ```
+
+     입력하면 github사이트에 업로드 됨
+
+
+
+origin을 잘못 등록했다면 
+
+git remote -v로 origin 정보 불러오기 => git remote add origin 불러온오리진정보로 제거 => 다시 origin등록
+
