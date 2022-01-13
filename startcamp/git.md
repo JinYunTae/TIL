@@ -54,7 +54,11 @@ GitBash에서 TIL 폴더 git연동
 
 TIL 폴더에서 우클릭 => gitbash 열기 => bash에서 `git init`입력 => 아래 3개 공간이 생성됨
 
+
+
 git의 3가지 공간
+
+![image-20220113161745268](git.assets/image-20220113161745268.png)
 
 로컬 저장소 (내 컴퓨터)
 
@@ -64,7 +68,7 @@ git의 3가지 공간
 
 Working directory : 실제 폴더를 참조해 변화된 내용을 가져옴
 
-working directory => Staging Area : git add
+working directory => Staging Area : git add (git add . 현재 디랙토리 전부 업로드)
 
 Staging Area => Local Repository : git commit => ver1 생성
 
@@ -89,6 +93,8 @@ git status : Working directory와 Staging Area 상태보기
 git log : commit된 사항 확인
 
 markdown은 이미지를 다른 장소(asset에 저장하고 상대위치로 가져옴 - 경로 바뀌면 이미지 안나옴, git 업로드 시 사진파일 있는 폴더와 markdown 함께 올려야 함
+
+typora저장 안한 상태로 사진 붙여넣으면 typora 기본 설정 폴더에 사진 저장됨 => 이대로 업로드하면 엑박남 ==> 이를 방지하기 위해 typora 열고 바로 저장 한 번 하기
 
 
 
