@@ -13,5 +13,5 @@
 
 #### 	Java
 
-​		1. [java의 개요 및 개발환경 구축](./startcamp/java.md)
+​		1. [java의 개요 및 개발환경 구축](./startcamp/Java.md)
 
