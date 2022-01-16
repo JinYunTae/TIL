@@ -13,5 +13,9 @@
 
 #### 	Java
 
-​		1. [java의 개요 및 개발환경 구축](./startcamp/Java.md)
+  1. [Java의 개요 및 개발환경 구축](./startcamp/Java.md)
+
+  2. [Java의 프로그램 구조 및 데이터 타입](./startcamp/Java2.md)
+
+     
 
