@@ -18,6 +18,6 @@
 
 #### Java
 
-1. [Java의 개요 및 개발환경 구축](./language/Java/Java(개요 및 환경 구축).md)
-2. [Java의 프로그램 구조 및 데이터 타입](./language/Java/Java2(구조 및 데이터 타입).md)
+1. [Java의 개요 및 개발환경 구축](./language/Java/Java(개요_및_환경_구축).md)
+2. [Java의 프로그램 구조 및 데이터 타입](./language/Java/Java2(구조_및_데이터_타입).md)
 
