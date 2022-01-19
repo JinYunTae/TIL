@@ -17,6 +17,10 @@
 2. [Python의 제어문](./language/Python/Python2(control_statement).md)
 2. [Python의 함수](./language/Python/Python3(function).md)
 
+참고 사이트
+
+1. [python tutor(코드 실행 과정 시각화)](https://pythontutor.com/visualize.html#mode=edit)
+
 #### Java
 
 1. [Java의 개요 및 개발환경 구축](./language/Java/Java(개요_및_환경_구축).md)
