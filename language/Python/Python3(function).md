@@ -207,7 +207,7 @@ print(result)    # 9가 출력됨
   ```python
   def rectangle (width, height) :
       area = width * height
-      round = 2 * width + 2 * height
+      round = 2 * (width + height)
       return area, round
   ```
 
