@@ -142,14 +142,14 @@ ex) $ python -m venv venv
 
   * `<venv>`는 가상환경을 포함하는 디렉토리 경로
 
-    | 플랫폼 | 셀              | 가상 환경을 활성화하는 명령         |
-    | ------ | --------------- | ----------------------------------- |
-    | POSIX  | bash / zsh      | $ source <venv>/bin/activate        |
-    |        | fish            | $ source <venv>/bin/activate.fish   |
-    |        | csh / tcsh      | $ source <venv>/bin/activate.csh    |
-    |        | PowerShell Core | $ <venv>/bin/Activate.ps1           |
-    | 윈도우 | cmd.exe         | C:\> <venv>\Scripts\activate.bat    |
-    |        | PowerShell      | PS C:\> <venv>\Scripts\activate.ps1 |
+    | 플랫폼 | 셀              | 가상 환경을 활성화하는 명령           |
+    | ------ | --------------- | ------------------------------------- |
+    | POSIX  | bash / zsh      | $ source <venv>/Scripts/activate      |
+    |        | fish            | $ source <venv>/Scripts/activate.fish |
+    |        | csh / tcsh      | $ source <venv>/Scripts/activate.csh  |
+    |        | PowerShell Core | $ <venv>/bin/Activate.ps1             |
+    | 윈도우 | cmd.exe         | C:\> <venv>\Scripts\activate.bat      |
+    |        | PowerShell      | PS C:\> <venv>\Scripts\activate.ps1   |
 
 * 가상환경 비활성화
 
