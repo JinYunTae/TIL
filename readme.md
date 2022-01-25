@@ -18,6 +18,7 @@
 3. [Python의 함수](./language/Python/Python3(function).md)
 4. [Python의 모듈과 패키지](./language/Python/Python4(module_and_package).md)
 4. [Python의 데이터 구조 및 활용](./language/Python/Python5(data_structure).md)
+4. [Python의 에러, 예외처리](./language/Python/Python6(error_exception_handling).md)
 
 참고 사이트
 
