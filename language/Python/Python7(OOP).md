@@ -979,7 +979,7 @@ ex) Preson class / Person class를 상속받는 Professor, Student class
 > Child.mro()
 > ```
 >
-> [`__main__`.Child, `__main__`.Mom, `__main__`.Dad, `__main__`.Person, `__main__`.object]
+> [`__main__`.Childㄶ, `__main__`.Mom, `__main__`.Dad, `__main__`.Person, `__main__`.object]
 
 ## 다형성
 
