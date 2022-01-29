@@ -983,3 +983,51 @@ ex) Preson class / Person class를 상속받는 Professor, Student class
 
 ## 다형성
 
+* 여러 모양을 뜻하는 그리스어
+* 동일한 메소드가 클래스에 따라 다르게 행동할 수 있음을 의미
+* 즉, 서로 다른 클래스에 속해있는 객체들이 **동일한 메시지에 대해 다른 방식으로 응답될 수 있음**
+
+### 메소드 오버라이딩
+
+* 상속 받은 메소드를 재정의
+  * 클래스 상속 시, 부모 클래스에서 정의한 메소드를 자식 클래스에서 변경
+  * 부모 클래스의 메소드 이름과 기본 기능은 그대로 사용하지만, 특정 기능을 바꾸고 싶을 때 사용
+  * 부모 클래스의 메소드를 실행시키고 싶은 경우 super를 활용
+
+<예시코드>
+
+> ```python
+> class Person:
+>     def __init__(self, name):
+>         self.name = name
+>         
+>     def talk(self):
+>         print(f'반갑습니다. {self.name}입니다.')
+> 
+> # 자식 클래스
+> class Professor(Person):
+>     def talk(self):
+>         print(f'{self.name}일세.')
+>         
+> # 자식 클래스
+> def Student(Person):
+>     def talk(self):
+>         super().talk()
+>         print(f'저는 학생입니다.')
+> ```
+>
+> ```python
+> p1 = Professor('김교수')
+> p1.talk()
+> ```
+>
+> 김교수일세.
+>
+> ```python
+> s1 = Student('이학생')
+> s1.talk()
+> ```
+>
+> 반갑습니다. 이학생입니다.
+>
+> 저는 학생입니다.
