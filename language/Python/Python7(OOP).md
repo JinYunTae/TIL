@@ -1031,3 +1031,161 @@ ex) Preson class / Person class를 상속받는 Professor, Student class
 > 반갑습니다. 이학생입니다.
 >
 > 저는 학생입니다.
+
+## 캡슐화
+
+* 객체의 일부 구현 내용에 대한 외부로부터 직접적인 액세스를 차단
+  * 예시 : 주민등록번호
+* 파이썬에서 암묵적으로 존재하지만, 언어적으로는 존재하지 않음
+
+### 접근제어자 종류
+
+* Public Access Modifier
+
+  * 언더바가 없이 시작하는 메소드나 속성
+  * 어디서나 호출이 가능, 하위 클래스 override허용
+  * 일반적으로 작성되는 메소드와 속성의 대다수를 차지
+
+  > ```python
+  > class Persin:
+  >     
+  >     def __init__(self, name, age):
+  >         self.name = name
+  >         self.age = 30
+  > ```
+  >
+  > ```python
+  > # Person 클래스의 인스턴스인 p1은 이름(name)과 나이(age) 모두 접근 가능합니다.
+  > 
+  > p1 = Person('김싸피', 30)
+  > print(p1.name)
+  > print(p1.age)
+  > ```
+  >
+  > 김싸피
+  >
+  > 30
+
+* Protected Access Modifier
+
+  * 언더바 1개로 시작하는 메소드나 속성
+  * 암묵적 규칙에 의해 부모 클래스 내부와 자식 클래스에서만 호출 가능
+  * 하위 클래스 override허용
+
+  > ```python
+  > class Persin:
+  >     
+  >     def __init__(self, name, age):
+  >         self.name = name
+  >         self._age = 30
+  > 
+  >     def get_age(self):
+  >         return self._age
+  > ```
+  >
+  > ```python
+  > # 인스턴스를 만들고 get_age 메소드를 활용해 호출할 수 있습니다.
+  > 
+  > p1 = Person('김싸피', 30)
+  > p1.get_age()
+  > ```
+  >
+  > 30
+  >
+  > ```python
+  > # _age에 직접 접근하여도 확인이 가능합니다.
+  > # 파이썬에서는 암묵적으로 활용될 뿐입니다.
+  > p1.age
+  > ```
+  >
+  > 30
+
+* Private Access Modifier
+
+  * 언더바 2개로 시작하는 메소드나 속성
+  * 본 클래스 내부에서만 사용이 가능
+  * 하위 클래스 상속 및 호출 불가능(오류)
+  * 외부 호출 불가능(오류)
+
+  > ```python
+  > class Persin:
+  >     
+  >     def __init__(self, name, age):
+  >         self.name = name
+  >         self.__age = 30
+  > 
+  >     def get_age(self):
+  >         return self.__age
+  > ```
+  >
+  > ```python
+  > # 인스턴스를 만들고 get_age 메소드를 활용하여 호출할 수 있습니다.
+  > 
+  > p1 = Person('김싸피', 30)
+  > p1.get_age()
+  > ```
+  >
+  > 30
+  >
+  > ```python
+  > # age에 직접 접근이 불가능합니다.
+  > 
+  > p1.__age
+  > ```
+  >
+  > AttrubuteError: 'Person' object has no attribute '__age'
+
+### getter 메소드와 setter 메소드
+
+* 변수에 접근할 수 있는 메소드를 별도로 생성
+  * getter 메소드 : 변수의 값을 읽는 메소드
+    * @property 데코레이터를 사용
+  * setter 메소드 : 변수의 값을 설정하는 성격의 메소드
+    * @getter이름.setter 데코레이터를 사용
+
+> ```python
+> class Persin:
+>     
+>     def __init__(self, age):
+>         self.__age = 30
+>     
+>     @property
+>     def age(self):
+>         return self.__age
+>     
+>     @age.setter
+>     def age(self, new_age):
+>         if new_age <= 19 :
+>             raise ValueError('Too Young For SSAFY')
+>             return
+>         
+>         self.__age = new_age
+> ```
+>
+> ```python
+> # Person의 인스턴스를 만들어서 나이에 접근하면 정상적으로 출력됩니다.
+> 
+> p1 = Person(20)
+> print(p1.age)
+> ```
+>
+> 20
+>
+> ```python
+> # p1 인스턴스의 나이를 다른 값으로 바꿔도 정상적으로 반영됩니다.
+> 
+> p1.age = 33
+> print(p1.age)
+> ```
+>
+> 33
+>
+> ```python
+> # setter 함수에는 "나이가 19살 이하면 안된다는" 조건문이 하나 걸려있습니다.
+> # 따라서 나이를 19살 이하인 값으로 변경하게 되면 오류가 발생합니다.
+> 
+> p1.age = 19
+> print(p1.age)
+> ```
+>
+> ValueError
