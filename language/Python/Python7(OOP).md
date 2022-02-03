@@ -530,10 +530,10 @@ my_instance.my_attribute    # 속성
 > ```python
 > # Person 정의
 > class Person:
->     name = 'unknown'
->     
->     def talk(self):
->         print(self.name)
+>  name = 'unknown'
+> 
+>  def talk(self):
+>      print(self.name)
 > ```
 >
 > ```python
@@ -550,6 +550,10 @@ my_instance.my_attribute    # 속성
 > p2.name = 'Kim'
 > p2.talk()
 > ```
+>
+> unknown
+>
+> Kim
 >
 > ```python
 > print(Person.name)

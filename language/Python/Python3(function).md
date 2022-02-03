@@ -184,7 +184,7 @@ print(result)    # 9가 출력됨
   ```python
   def minus_and_plus(x, y) :
       return x - y
-  	return x + y
+      return x + y
   ```
 
   함수는 return 후 종료되므로 3행의 return은 실행불가

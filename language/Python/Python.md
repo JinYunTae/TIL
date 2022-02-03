@@ -164,9 +164,15 @@ Space Sensitive
 * 다음의 키워드(keywords)는 예약어(reserved words)로 사용할 수 없음
 
   ```python
-  False, None, True, __peg_parser__, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield
+  False, None, True, __peg_parser__, and,
+  as, assert, async, await, break,
+  class, continue, def, del, elif,
+  else, except, finally, for, from,
+  global, if, import, in, is,
+  lambda, nonlocal, not, or, pass,
+  raise, return, try, while, with, yield
   ```
-
+  
   이들 키워드들은 내장함수나 모듈 등의 이름으로도 만들면 안됨 - 기존 이름에 다른 값을 할당하게 되므로 더 이상 동작하지 않게 됨
 
 ### 사용자 입력
