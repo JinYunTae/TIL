@@ -28,7 +28,7 @@ for j in range(6):
     # 최대 눈들의 합을 갱신합니다.
     if sum_max < sum(max_side):
         sum_max = sum(max_side)
-        
+    
 print(sum_max)
 '''
 예제 입력 1 
