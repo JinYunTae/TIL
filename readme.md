@@ -25,17 +25,24 @@
 
 1. [python tutor(코드 실행 과정 시각화)](https://pythontutor.com/visualize.html#mode=edit)
 
+#### Web
+
+1. [HTML](./language/Web/HTML.md)
+
 #### Java
 
 1. [Java의 개요 및 개발환경 구축](./language/Java/Java(개요_및_환경_구축).md)
 2. [Java의 프로그램 구조 및 데이터 타입](./language/Java/Java2(구조_및_데이터_타입).md)
 
+---
+
 ### 📝 Problem Solving
+
 1. [Project](./problem_solving/Project/)
 2. [Test](./problem_solving/monthly_test)
-2. Baekjoon
+2. [Baekjoon](./problem_solving/Baekjoon)
 
-
+---
 
 ### 📌자격증
 
