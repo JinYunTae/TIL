@@ -281,3 +281,51 @@
 
 자세한 내용은 CSS에서!!
 
+### 5.2. 텍스트 요소
+
+| 태그                               | 설명                                                         |
+| ---------------------------------- | ------------------------------------------------------------ |
+| `<a></a>`                          | href 속성을 활용하여 다른 URL로 연결하는 하이퍼링크 생성     |
+| `<b></b>`<br />`<strong></strong>` | 굵은 글씨 요소<br />중요한 강조하고자 하는 요소 (보통 굵은 글씨로 표현) |
+| `<i></i>`<br />`<em></em>`         | 기울임 글씨 요소<br />중요한 강조하고자 하는 요소 (보통 기울임 글씨로 표현) |
+| `<br>`                             | 텍스트 내에 줄 바꿈 생성                                     |
+| `<img>`                            | src 속성을 활용하여 이미지 표현                              |
+| `<span></span>`                    | 의미 없는 인라인 컨테이너                                    |
+
+#### 실행결과
+
+* a 태그
+
+​	<a>lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+
+* b 태그
+
+  <b>lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+
+* strong 태그
+
+  <strong>lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
+
+* i 태그
+
+  <i>lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>
+
+* em 태그
+
+  <em>lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
+
+* span 태그
+
+  <span>lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+### 5.3. 그룹 컨텐츠
+
+| 태그                         | 설명                                                         |
+| ---------------------------- | ------------------------------------------------------------ |
+| `<p></p>`                    | 하나의 문단 (paragraph)                                      |
+| `<hr>`                       | 문단 레벨 요소에서의 주제의 분리를 의미하며 수평선으로 표시 됨 (A Horizontal Rule) |
+| `<ol></ol>`<br />`<ul></ul>` | 순서가 있는 리스트 (ordered)<br />순서가 없는 리스트 (unordered) |
+| `<pre></pre>`                | HTML에 작성한 내용을 그대로 표현.<br />보통 고정폭 글꼴이 사용되고 공백문자를 유지 |
+| `<blockquote></blockquote>`  | 텍스트가 긴 인용문<br />주로 들여쓰기를 한 것으로 표현됨     |
+| `<div></div>`                | 의미 없는 블록 레벤                                          |
+
