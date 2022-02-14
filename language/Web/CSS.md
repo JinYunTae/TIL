@@ -172,3 +172,138 @@ ANS.
 
 ## 4. Selectors 심화
 
+* 자손 결합자
+  * selectorA 하위의 모든 selectorB 요소
+* 자식 결합자
+  * selectorA 바로 아래의 selectorB 요소
+* 일반 형제 결합자
+  * selectorA의 형제 요소 중 뒤에 위치하는 selectorB 요소를 모두 선택
+* 인접 형제 결합자
+  * selectorA의 형제 요소 중 바로 뒤에 위치하는 selectorB 요소를 선택
+
+### 4.1. 결합자(Combinators)
+
+* 자손 결합자
+  * selectorA 하위의 모든 selectorB 요소
+
+<예시 코드>
+
+>```CSS
+>div span {
+>    color: red;
+>}
+>```
+>
+>```HTML
+><div>
+>    <span>이건 빨강입니다.</span>
+>    <p>이건 빨강이 아닙니다.</p>
+>    <p>
+>        <span>이건 빨강입니다.</span>
+>    </p>
+></div>
+>```
+
+* 자식 결합자
+  * selectorA 바로 아래의 selectorB 요소
+
+> ```CSS
+> div > span {
+>     color: red;
+> }
+> ```
+>
+> ```HTML
+> <div>
+>     <span>이건 빨강입니다.</span>
+>     <p>이건 빨강이 아닙니다.</p>
+>     <p>
+>         <span>이건 빨강이 아닙니다.</span>
+>     </p>
+> </div>
+> ```
+
+* 일반 형제 결합자
+
+  * selectorA의 요소 중 뒤에 위치하는 selectorB 요소를 선택
+
+  <예시 코드>
+
+> ```CSS
+> p ~ span {
+>     color: red;
+> }
+> ```
+>
+> ```HTML
+> <span>p태그의 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
+> <p>여기 문단이 있습니다.</p>
+> <b>그리고 코드도 있습니다.</b>
+> <span>p태그와 형제이기 때문에 이건 빨강입니다!</span>
+> <b>더 많은 코드가 있습니다.</b>
+> <p>이것도 p태그와 형제이기 때문에 빨강입니다!</p>
+> ```
+
+* 인접 형제 결합자
+  * selectorA의 형제 요소 중 바로 뒤에 위치하는 selectorB 요소를 선택
+
+<예시 코드>
+
+> ```css
+> p + span {
+>     color: red;
+> }
+> ```
+>
+> ```HTML
+> <span>p태그의 앞에 있기 때문에 이건 빨강이 아닙니다.</span>
+> <p>여기 문단이 있습니다.</p>
+> <b>그리고 코드도 있습니다.</b>
+> <span>p태그와 인접한 형제이기 때문에 이건 빨강입니다!</span>
+> <b>더 많은 코드가 있습니다.</b>
+> <p>이것도 p태그와 인접한 형제가 아니기 때문에 이건 빨강이 아닙니다.</p>
+> ```
+
+<hr>
+
+## 5. CSS Box model
+
+### 5.1. Box model
+
+![image-20220214011221383](CSS.assets/image-20220214011221383.png)
+
+* 모든 요소는 **네모(박스모델)**이고, 위에서부터 아래로, 왼쪽에서 오른쪽으로 쌓인다. (좌상단 배치)
+
+* 하나의 박스는 네 부분(영역)으로 이루어짐
+
+  ![image-20220214011535409](CSS.assets/image-20220214011535409.png)
+
+  * Margin
+
+    ![image-20220214011702321](CSS.assets/image-20220214011702321.png)
+
+  ![image-20220214012042417](CSS.assets/image-20220214012042417.png)
+
+  * Padding
+
+    ![image-20220214011821616](CSS.assets/image-20220214011821616.png)
+
+  * Border
+
+    ![image-20220214012004634](CSS.assets/image-20220214012004634.png)
+
+    ![image-20220214011915955](CSS.assets/image-20220214011915955.png)
+
+### 5.2. Box sizing
+
+* 기본적으로 모든 요소의 box-sizing은 content-box
+  * Padding을 제외한 순수 contents 영역만을 box로 지정
+* 다만, 우리가 일반적으로 영역을 볼 때는 border까지의 너비를 100px로 보는 것을 원함
+  * 그 경우 box-sizing을 border-box로 설정
+
+![image-20220214012417971](CSS.assets/image-20220214012417971.png)
+
+<hr>
+
+## 6. CSS Display
+
