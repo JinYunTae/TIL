@@ -265,8 +265,11 @@ ANS.
 > ```
 
 <hr>
-
 ## 5. CSS Box model
+
+* *CSS 원칙 1*
+
+​	모든 요소는 **네모(박스모델)**이고, 위에서부터 아래로, 왼쪽에서 오른쪽으로 쌓인다.
 
 ### 5.1. Box model
 
@@ -306,4 +309,69 @@ ANS.
 <hr>
 
 ## 6. CSS Display
+
+* *CSS 원칙 2*
+
+  dispay에 따라 크기와 배치가 달라진다.
+
+### 6.1.인라인 요소와 블록 요소
+
+#### 대표적으로 활용되는 display
+
+* display: block
+  * 줄 바꿈이 일어나는 요소
+  * 화면 크기 전체의 가로 폭을 차지한다
+  * 블록 레벨 요소 안에 인라인 레벨 요소가 들어갈 수 있음
+* display: inline
+  * 줄 바꿈이 일어나지 않는 행의 일부 요소
+  * content 너비만큼 가로 폭을 차지한다
+  * width, height, margin-top, margin-bottom을 지정할 수 있다.
+  * 상하 여백은 line-height로 지정한다
+
+#### 블록 레벨 요소와 인라인 레벨 요소 구분(HTML 4,1까지)
+
+* 대표적인 블록 레벨 요소
+  * div / ul, ol, li / p / hr / form 등
+* 대표적인 인라인 레벨 요소
+  * span / a / img / input, label / b, em, i, strong 등
+
+#### 블록 요소의 특징
+
+* 블록의 기본 너비는 가질 수 있는 너비의 100%
+
+![image-20220215232437278](CSS.assets/image-20220215232437278.png)
+
+* 너비를 가질 수 없다면 자동으로 부여되는 margin
+
+![image-20220215232532104](CSS.assets/image-20220215232532104.png)
+
+#### 인라인 요소의 특징
+
+* inline의 기본 너비는 컨텐츠 영역만큼
+
+![image-20220215232622538](CSS.assets/image-20220215232622538.png)
+
+### 6.2. 속성에 따른 수평 정렬
+
+![image-20220215232728611](CSS.assets/image-20220215232728611.png)
+
+### 6.3. display
+
+* display: inline-block
+  * block과 inline 레벨 요소의 특징일 모두 가짐
+  * inline처럼 한 줄에 표시 가능하고, block처럼 width, height, margin 속성을 모두 지정할 수 있음
+* display: none
+  * 해당 요소를 화면에 표시하지 않고, 공간조차 부여되지 않음
+  * 이와 비슷한 visibility: hidden은 해당 요소가 공간은 차지하나 화면에 표시만 하지 않는다.
+* 이외 다양한 display 속성은 https://developer.mozilla.org/ko/docs/Web/CSS/display
+
+#### 직접 확인해보기
+
+![image-20220215233306141](CSS.assets/image-20220215233306141.png)
+
+![image-20220215233336345](CSS.assets/image-20220215233336345.png)
+
+<hr>
+
+## 7. CSS Position
 
