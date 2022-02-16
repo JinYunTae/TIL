@@ -375,3 +375,88 @@ ANS.
 
 ## 7. CSS Position
 
+* 문서 상에서 요소의 위치를 지정
+
+* **static** : 모든 태그의 기본 값(기준 위치)
+
+  * 일반적인 요소의 배치 순서에 따름(좌측 상단)
+  * 부모 요소 내에서 배치될 때는 부모 요소의 위치를 기준으로 배치 됨
+
+  ![image-20220217011055646](CSS.assets/image-20220217011055646.png)
+
+* 아래는 좌표 프로퍼티(top, bottom, left, right)를 사용하여 이동 가능
+
+  * **relative** : 상대위치
+
+    * 자기 자신의 static 위치를 기준으로 이동 (normal flow 유지)
+    * 레이아웃에서 요소가 차지하는 공간은 static 일 때와 같음 (normal position 대비 offset)
+
+    ![image-20220217011124922](CSS.assets/image-20220217011124922.png)
+
+  * **absolute** : 절대위치
+
+    * 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음 (normal flow에서 벗어남)
+    * static이 아닌 가장 가까이 있는 부모/조상 요소를 기준으로 이동 (없는 경우 body)
+
+    ![image-20220217011152421](CSS.assets/image-20220217011152421.png)
+
+  * **fixed** : 고정 위치
+
+    * 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음 (normal flow에서 벗어남)
+    * 부모 요소와 관계없이 viewport를 기준으로 이동
+      * 스크롤 시에도 항상 같은 곳에 위치함
+
+    ![image-20220217011324476](CSS.assets/image-20220217011324476.png)
+
+### 7.1. relative vs. absolute
+
+![image-20220217011533527](CSS.assets/image-20220217011533527.png)
+
+![image-20220217011616365](CSS.assets/image-20220217011616365.png)![image-20220217011649064](CSS.assets/image-20220217011649064.png)
+
+### 7.2. absolute와 fixed의 사용 시기
+
+### absolute
+
+![image-20220217011811576](CSS.assets/image-20220217011811576.png)
+
+#### fixed
+
+![image-20220217011842418](CSS.assets/image-20220217011842418.png)
+
+## 7.3. CSS 원칙
+
+* CSS 원칙 1, 2 : Normal flow
+  * 모든 요소는 네모(박스모델), 좌측 상단에 배치
+  * display에  따라 요소간 배치가 달라짐
+* CSS 원칙 3 :
+  * Position으로 위치의 기준을 변경
+    * relative : 본인의 원래 위치
+    * absolute : 특정 부모의 위치
+    * fixed : 화면의 위치
+
+<hr>
+
+## 8. 추가 컨텐츠
+
+### 8.1. 학습 가이드라인
+
+* MDN web docs
+
+  https://developer.mozilla.org/ko/
+
+* 개발자 도구 활용법
+
+  https://developer.chrome.com/docs/devtools/css/
+
+### 8.2. Emmet
+
+* HTML & CSS를 작성할 때 보다 빠른 마크업을 위해서 사용되는 오픈소스
+
+* 단축키, 약어 등을 사용
+
+* 대부분의 텍스트 에디터에서 지원
+
+  https://emmet.io/
+
+  https://docs.emmet.io/cheat-sheet/
