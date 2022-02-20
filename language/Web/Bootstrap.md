@@ -140,5 +140,170 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 ## 3. Flexbox
 
+## 3.1. CSS Flexible Box Layout
 
+* 행과 열 형태로 아이템들을 배치하는 1차원 레이아웃 모델
 
+* 축
+
+  * main axis (메인 축)
+  * cross axis (교차 축)
+
+  ![image-20220220214229444](Bootstrap.assets/image-20220220214229444.png)
+
+* 구성 요소
+
+  * Flex Container (부모 요소)
+  * Flex Item (자식 요소)
+
+### Flexbox 축
+
+* flex-direction: row
+
+![image-20220220214748828](Bootstrap.assets/image-20220220214748828.png)
+
+### Flexbox의 사용 이유
+
+이전까지 Normal Flow를 벗어나는 수단은 Float 혹은 Position => 작업의 한계 발생
+
+(수동 값 부여 없이)
+
+1. 수직 정렬
+2. 아이템의 너비와 높이 혹은 간격을 동일하게 배치
+
+## 3.2. Flexbox 구성 요소
+
+* Flex Container (부모 요소)
+  * flexbox 레이아웃을 형성하는 가장 기본적인 모델
+  * Flex Item들이 놓여있는 영역
+  * display 속성을 flex 혹은 inline-flex로 지정
+* Flex Item (자식 요소)
+  * 컨테이너에 속해 있는 컨텐츠(박스)
+
+### 3.3. flexbox 시작
+
+```CSS
+.flex-container {
+    display: flex;
+}
+```
+
+부모 요소에 display: flex 혹은 inline-flex
+
+### Flex 속성
+
+* 배치 설정
+  * flex-direction
+  * flex-wrap
+* 공간 나누기
+  * justify-content (main axis)
+  * align-content (cross axis)
+* 정렬
+  * align-items (모든 아이템을 cross axis기준으로)
+  * align-self (개별 아이템)
+
+#### flex-direction
+
+* Main axis 기준 방향 설정
+* 역방향의 경우 HTML 태그 선언 순서와 시각적으로 다르니 유의 (웹 접근성에 영향)
+
+​	![image-20220220215748001](Bootstrap.assets/image-20220220215748001.png)
+
+#### flex-wrap
+
+* 아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정
+
+* 즉, 기본적으로 컨테이너 영역을 벗어나지 않도록 함
+
+  ![image-20220220215904456](Bootstrap.assets/image-20220220215904456.png)
+
+#### flex-direction & flex-wrap
+
+* flex-direction : Main axis의 방향을 설정
+
+* flex-wrap : 요소들이 강제로 한 줄에 배치 되게 할 것인지 여부 설정
+
+  * nowrap (기본값) : 한 줄에 배치
+  * wrap : 넘치면 그 다음 줄로 배치
+
+* flex-flow
+
+  * flex-direction과 flex-wrap의 shorthand
+  * flex-direction과 flex-wrap에 대한 설정 값을 차례로 작성
+
+  예시) flex-flow: row nowrap;
+
+#### justify-content
+
+* Main axis를 기준으로 공간 배분
+
+  ![image-20220220220306193](Bootstrap.assets/image-20220220220306193.png)
+
+#### align-content
+
+* Cross axis를 기준으로 공간 배분 (아이템이 한 줄로 배치되는 경우 확인할 수 없음)
+
+![image-20220220220413270](Bootstrap.assets/image-20220220220413270.png)
+
+#### justify-content & align-content
+
+* 공간 배분
+  * flex-start (기본 값) : 아이템들을 axis 시작점으로
+  * flex-end : 아이템들을 axis 끝 쪽으로
+  * center : 아이템들을 axis 중앙으로
+  * space-between : 아이템 사이의 간격을 균일하게 분배
+  * space-around : 아이템을 둘러싼 영역을 균일하게 분배 (가질 수 있는 영역을 반으로 나눠서 양쪽에)
+  * space-evenly : 전체 영역에서 아이템 간 간격을 균일하게 분배
+
+#### align-items
+
+* 모든 아이템을 Corss axis를 기준으로 정렬
+
+  * **주의! 해당 속성은 컨테이너에 적용하는 것이 아니라 개별 아이템에 적용**
+
+  ![image-20220220220745289](Bootstrap.assets/image-20220220220745289.png)
+
+#### align-items & align-self
+
+* Cross axis를 중심으로
+  * stretch (기본 값) : 컨테이너를 가득 채움
+  * flex-start : 위
+  * flex-end : 아래
+  * center : 가운데
+  * baseline : 텍스트 baseline에 기준선을 맞춤
+
+#### 기타 속성
+
+* flex-grow : 남은 영역을 아이템에 배분
+* order (기본값 0) : 배치 순서
+
+<예시 코드>
+
+>```HTML
+><div class="flex_item grow-1 order-3">1</div>
+><div class="flex_item grow-1">2</div>
+><div class="flex_item order-1">3</div>
+><div class="flex_item order-2">4</div>
+>```
+>
+>![image-20220220221912772](Bootstrap.assets/image-20220220221912772.png)
+
+### 3.4. 활용 레이아웃
+
+* 수직 수평 가운데 정렬
+
+![image-20220220222026430](Bootstrap.assets/image-20220220222026430.png)
+
+* 카드 배치
+
+![image-20220220222141702](Bootstrap.assets/image-20220220222141702.png)
+
+*참고 - IE는 항상 지원여부를 확인하자*
+
+![image-20220220222243304](Bootstrap.assets/image-20220220222243304.png)
+
+<hr>
+
+<hr>
+
+# Bootstrap
