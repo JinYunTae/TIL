@@ -307,3 +307,24 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 <hr>
 
 # Bootstrap
+
+![image-20220222234001692](Bootstrap.assets/image-20220222234001692.png)
+
+**The world most popular front-end open source**
+
+<hr>
+
+## 1. Bootstrap의 자체 템플릿
+
+![image-20220222234214869](Bootstrap.assets/image-20220222234214869.png)
+
+![image-20220222234238659](Bootstrap.assets/image-20220222234238659.png)
+
+<hr>
+
+## 2. Bootstrap 사용
+
+가이드 사이트 : https://getbootstrap.com/docs/5.0/getting-started/download/
+
+
+
