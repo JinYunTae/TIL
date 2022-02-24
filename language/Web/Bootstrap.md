@@ -326,40 +326,60 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 가이드 사이트 : https://getbootstrap.com/docs/5.0/getting-started/download/
 
-**중요** :
+**중요** : Bootstrap 사용 시 필수사항
 
-> Bootstrap 사용 시 필수사항
->
 > ```HTML
-> <!DOCTYPE html>
+><!DOCTYPE html>
 > <html lang="en">
 > <head>
->   <meta charset="UTF-8">
->   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+> <meta charset="UTF-8">
+> <meta http-equiv="X-UA-Compatible" content="IE=edge">
 >   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 >   
 >   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 >   
 >   <title>Document</title>
-> </head>
-> <body>
+>   </head>
+>   <body>
 > 
->   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 > </body>
-> </html>
+>   </html>
 > ```
->
+> 
 > 헤드에 
 >
 > ```html
-> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 > ```
->
+> 
 > 바디 끝에
 >
 > ```html
-> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 > ```
->
+> 
 > 추가해야 정상적으로 적용 됨!!
+
+## 2.1. spacing
+
+### margin과 padding
+
+클래스에 작성하여 요소에 적용
+
+![image-20220224232129625](Bootstrap.assets/image-20220224232129625.png)
+
+* mt, mx, py, pe 등의 축약어로 원하는 위치에 각 요소를 넣을 수 있음
+
+* margin과 padding에 -(번호)를 이용해 지정된 크기로 박스를 조절할 수 있음
+
+  * auto의 경우 중앙정렬
+
+  1rem = 16픽셀로 기본 지정 되어있고 각 번호에 맞게 배율로 조절되어 적용됨
+
+<예시 코드>
+
+> mx-1 (margin 박스를 좌우로 4px 적용)
+>
+> pt-3 (padding 박스를 위쪽으로 16px 적용)
 
