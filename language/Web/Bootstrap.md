@@ -361,6 +361,8 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 > 
 > 추가해야 정상적으로 적용 됨!!
 
+<hr>
+
 ## 2.1. spacing
 
 ### margin과 padding
@@ -383,3 +385,20 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 >
 > pt-3 (padding 박스를 위쪽으로 16px 적용)
 
+<hr>
+
+## 2.2. color
+
+* 기존 CSS 색상
+
+  ![image-20220225235142082](Bootstrap.assets/image-20220225235142082.png)
+
+* Bootstrap 색상
+
+  ![image-20220225235212394](Bootstrap.assets/image-20220225235212394.png)
+
+Bootstrap 색상이 훨씬 보기 편하다
+
+### 각 색상별 이름과 코드
+
+![image-20220225235314156](Bootstrap.assets/image-20220225235314156.png)
