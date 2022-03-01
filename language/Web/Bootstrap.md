@@ -41,23 +41,23 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 >
 > ```html
 > <body>
->   <div class="box left">float left</div>
->   <p>lorem300 자동 완성으로 길~게</p>
+> <div class="box left">float left</div>
+> <p>lorem300 자동 완성으로 길~게</p>
 > </body>
 > ```
 >
 > ```CSS
 > .box {
->   width: 150px;
->   higth: 150px;
->   border: 1px solid black;
->   background-color: crimson;
->   color: white;
->   margin-right: 30px;
+> width: 150px;
+> higth: 150px;
+> border: 1px solid black;
+> background-color: crimson;
+> color: white;
+> margin-right: 30px;
 > }
 > 
 > .left {
->   float: left;
+> float: left;
 > }
 > ```
 >
@@ -67,10 +67,10 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 >
 > ```HTML
 > <body>
->   <header>
->     <div class="box1">div</div>
->   </header>
->   <div class="box2">div</div>
+> <header>
+>  <div class="box1">div</div>
+> </header>
+> <div class="box2">div</div>
 > </body>
 > ```
 >
@@ -78,19 +78,19 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 >
 > ```HTML
 > <body>
->   <header>
->     <div class="box1 left">div</div>
->   </header>
->   <div class="box2">div</div>
+> <header>
+>  <div class="box1 left">div</div>
+> </header>
+> <div class="box2">div</div>
 > </body>
 > ```
 >
 > ```CSS
 > <style>
->   /* style에 float left 추가*/
->   .left {
->     float: left;
->   }
+> /* style에 float left 추가*/
+> .left {
+>  float: left;
+> }
 > </style>
 > ```
 >
@@ -100,18 +100,18 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 >
 > ```HTML
 > <body>
->   <header class="clearfix">
->     <div class="box1 left">div</div>
->   </header>
->   <div class="box2">div</div>
+> <header class="clearfix">
+>  <div class="box1 left">div</div>
+> </header>
+> <div class="box2">div</div>
 > </body>
 > ```
 >
 > ```CSS
 > .clearfix::after {
->   content: "";
->   display: block;
->   clear: both;
+> content: "";
+> display: block;
+> clear: both;
 > }
 > ```
 >
@@ -140,7 +140,7 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 ## 3. Flexbox
 
-## 3.1. CSS Flexible Box Layout
+### 3.1. CSS Flexible Box Layout
 
 * 행과 열 형태로 아이템들을 배치하는 1차원 레이아웃 모델
 
@@ -156,13 +156,13 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
   * Flex Container (부모 요소)
   * Flex Item (자식 요소)
 
-### Flexbox 축
+#### Flexbox 축
 
 * flex-direction: row
 
 ![image-20220220214748828](Bootstrap.assets/image-20220220214748828.png)
 
-### Flexbox의 사용 이유
+#### Flexbox의 사용 이유
 
 이전까지 Normal Flow를 벗어나는 수단은 Float 혹은 Position => 작업의 한계 발생
 
@@ -171,7 +171,7 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 1. 수직 정렬
 2. 아이템의 너비와 높이 혹은 간격을 동일하게 배치
 
-## 3.2. Flexbox 구성 요소
+### 3.2. Flexbox 구성 요소
 
 * Flex Container (부모 요소)
   * flexbox 레이아웃을 형성하는 가장 기본적인 모델
@@ -190,7 +190,7 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 부모 요소에 display: flex 혹은 inline-flex
 
-### Flex 속성
+#### Flex 속성
 
 * 배치 설정
   * flex-direction
@@ -363,9 +363,9 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 <hr>
 
-## 2.1. spacing
+### 2.1. spacing
 
-### margin과 padding
+#### margin과 padding
 
 클래스에 작성하여 요소에 적용
 
@@ -387,7 +387,7 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 <hr>
 
-## 2.2. color
+### 2.2. color
 
 * 기존 CSS 색상
 
@@ -399,6 +399,103 @@ CSS 기본원칙 1, 2인 모든 요소는 **네모(박스모델)**이고, 위에
 
 Bootstrap 색상이 훨씬 보기 편하다
 
-### 각 색상별 이름과 코드
+#### 각 색상별 이름과 코드
 
 ![image-20220225235314156](Bootstrap.assets/image-20220225235314156.png)
+
+* Display, Position을 공식 문서를 보며 진행해보자
+
+![image-20220301232422165](Bootstrap.assets/image-20220301232422165.png)
+
+![image-20220301232451949](Bootstrap.assets/image-20220301232451949.png)
+
+![image-20220301232513555](Bootstrap.assets/image-20220301232513555.png)
+
+![image-20220301232536358](Bootstrap.assets/image-20220301232536358.png)
+
+![image-20220301232603693](Bootstrap.assets/image-20220301232603693.png)
+
+### 2.3. Component
+
+![image-20220301232753108](Bootstrap.assets/image-20220301232753108.png)
+
+### 2.4. Flexbox in Bootstrap
+
+![image-20220301232728513](Bootstrap.assets/image-20220301232728513.png)
+
+#### 2.5. Responsive Web
+
+* 같은 컨텐츠를 보는 각기 다른 디바이스 환경
+
+![image-20220301232908673](Bootstrap.assets/image-20220301232908673.png)
+
+* 다양한 화면 크기를 가진 디바이스들이 등장함에 따라 responsive web design 개념이 등장
+* 반응형 웹은 별도의 기술 이름이 아닌 웹 디자인에 대한 접근 방식, 반응형 레이아웃 작성에 도움이 되는 사례들의 모음 등을 기술하는데 사용되는 용어
+* 예시
+  * Media Queries, Flexbox, Bootstrap Grid System, The viewprot meta tag
+
+<hr>
+
+## 3. Bootstrap Grid System
+
+### 3.1. Grid system (web design)
+
+* 요소들의 디자인과 배치에 도움을 주는 시스템
+* 기본요소
+  * Column : 실제 컨텐츠를 포함하는 부분
+  * Gutter : 칼럼과 칼럼 사이의 공간 (사이 간격)
+  * Container : Column들을 담고 있는 공간
+
+![image-20220301233806173](Bootstrap.assets/image-20220301233806173.png)
+
+* Bootstarp Grid system은 flexbox로 제작됨
+* container, row, column으로 컨텐츠를 배치하고 정렬
+* **반드시 기억해야 할 2가지!**
+  * 12개의 column
+  * 6개의 grid breakpoint
+
+### 3.2. 사용해보기
+
+#### Grid system
+
+![image-20220301234342744](Bootstrap.assets/image-20220301234342744.png)
+
+![image-20220301234443780](Bootstrap.assets/image-20220301234443780.png)
+
+#### Grid system breakpoints
+
+![image-20220301234607497](Bootstrap.assets/image-20220301234607497.png)
+
+![image-20220301234719444](Bootstrap.assets/image-20220301234719444.png)
+
+![image-20220301234746784](Bootstrap.assets/image-20220301234746784.png)
+
+![image-20220301234802987](Bootstrap.assets/image-20220301234802987.png)
+
+![image-20220301234822399](Bootstrap.assets/image-20220301234822399.png)
+
+![image-20220301234836708](Bootstrap.assets/image-20220301234836708.png)
+
+![image-20220301234854075](Bootstrap.assets/image-20220301234854075.png)
+
+![image-20220301234921427](Bootstrap.assets/image-20220301234921427.png)
+
+![image-20220301234944816](Bootstrap.assets/image-20220301234944816.png)
+
+![image-20220301235006226](Bootstrap.assets/image-20220301235006226.png)
+
+![image-20220301235025320](Bootstrap.assets/image-20220301235025320.png)
+
+![image-20220301235214373](Bootstrap.assets/image-20220301235214373.png)
+
+![image-20220301235228082](Bootstrap.assets/image-20220301235228082.png)
+
+![image-20220301235313396](Bootstrap.assets/image-20220301235313396.png)
+
+<hr>
+
+## 4. 마무리
+
+**각각의 기술은 저마다 용도가 있고, 장단점이 있으며, 어떤 기술도 독립적인 용도를 갖추도록 설계되지는 않았다.
+특정 상황에 어떤 기술이 가장 적합한 도구가 될 것인지 파악하는 데에는 많은 경험이 뒷받침되어야 한다.**
+
