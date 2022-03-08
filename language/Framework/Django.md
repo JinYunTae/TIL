@@ -6,6 +6,7 @@
 
 * Django is a high-level **Python Web framework** that encourages rapid development and clean, pragmatic design.
 * It takes care of much of the hassle of Web development, so **you can focus on writing your app without needing to reinvent the wheel**.
+* 다만, 다소 독선적인 성격을 가지고 있다.
 
 ### 1.1. Web
 
@@ -551,3 +552,105 @@ include tag를 통해 base.html에 _nav.html 포함시키기
 ---
 
 ## 6. URL
+
+### 6.1. Django URLs
+
+* Dispatcher(발송자, 운항 관리자)로서의 URL
+* 웹 애플리케이션은 URL을 통한 클라이언트의 요청에서부터 시작 됨
+
+### 6.2. Variable Routing
+
+* URL 주소를 변수로 사용하는 것
+* URL의 일부를 변수로 지정하여 view 함수의 인자로 넘길 수 있음
+* 즉, 변수 값에 따라 하나의 path()에 여러 페이지를 연결 시킬 수 있음
+
+<사용 예시>
+
+> * 참고 : 사실 파이썬 파일 내에서 하는 작업이라 f-string으로 써야 함. 아래 쓴 내용은 html에서 받을 때의 작성 형식임
+> * path('accounts/user/`<int:user_pk>`/', ...) 
+>   * accounts/user/1 -> (1번 user 관련 페이지)
+>   * accounts/user/2 -> (2번 user 관련 페이지)
+
+### 6.3. URL Path converters
+
+![image-20220308181350322](Django.assets/image-20220308181350322.png)
+
+* str
+
+  * '/'를 제외하고 비어 있지 않은 모든 문자열과 매치
+  * 작성하지 않을 경우 기본 값
+
+* int
+
+  * 0 또는 양의 정수와 매치
+
+* slug
+
+  * ASCII 문자 또는 숫자, 하이픈 및 밑줄 문자로 구성된 모든 슬러그 문자열과 매치
+
+  < 사용 예시 >
+
+  > 'building-your-1st-django-site'
+
+* uuid
+* path
+
+#### 실습예제
+
+![image-20220308181647947](Django.assets/image-20220308181647947.png)
+
+### 6.4. App URL mapping
+
+* app의 view 함수가 많아지면서 사용하는 path() 또한 많아지고, app 또한 더 많이 작성되기 때문에 프로젝트의 urls.py에서 모두 관리하는 것은 프로젝트 유지보수에 좋지 않음
+
+* 이제는 각 app에서 urls.py를 작성하게 됨
+
+  * pages 앱 생성 및 등록 후 url 작성하는 방식(기존 방식)
+
+  ![image-20220308181904939](Django.assets/image-20220308181904939.png)
+
+  * 각각의 앱 안에 urls.py를 생성하고  프로젝트 urls.py에서 각 앱의 urls.py 파일로 URL 매핑을 위탁하는 방식
+
+  ![image-20220308182137250](Django.assets/image-20220308182137250.png)
+
+### 6.5. Including other URLconfs
+
+![image-20220308182344496](Django.assets/image-20220308182344496.png)
+
+urlpattern은 언제든지 다른 URLconf 모듈을 포함(include)할 수 있음
+
+* include()
+  * 다른 URLconf(app1/urls.py)들을 참조할 수 있도록 도움
+  * 함수 include()를 만나게 되면, URL의 그 시점까지 일치하는 부분을 잘라내고, 남은 문자열 부분을 후속 처리를 위해 include된 URLconf로 전달
+* django는 명시적 상대경로(from .module import ..)를 권장
+
+<작동 방식>
+
+![image-20220308182626614](Django.assets/image-20220308182626614.png)
+
+![image-20220308182645978](Django.assets/image-20220308182645978.png)
+
+![image-20220308182709464](Django.assets/image-20220308182709464.png)
+
+### 6.6. Naming URL patterns
+
+* 이제는 링크에 url을 직접 작성하는 것이 아니라 path() 함수의 name 인자를 정의해서 사용
+* Django Template Tag 중 하나인 url 태그를 사용해서 path() 함수에 작성한 name을 사용할 수 있음
+* url 설정에 정의된 특정한 경로들의 의존성을 제거할 수 있음
+
+![image-20220308182950922](Django.assets/image-20220308182950922.png)
+
+#### 적용
+
+![image-20220308183023409](Django.assets/image-20220308183023409.png)
+
+the 'name' value as called by the {% url %} template tag
+
+### 6.7. url template tag
+
+![image-20220308183209564](Django.assets/image-20220308183209564.png)
+
+* 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소를 반환
+* 템플릿에 URL을 하드 코딩하지 않고도 DRY 원칙을 위반하지 않으면서 링크를 출력하는 방법
+
+![image-20220308183329741](Django.assets/image-20220308183329741.png)
