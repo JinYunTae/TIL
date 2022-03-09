@@ -31,13 +31,15 @@
   * 열(column) : 필드(field) or 속성
   * 행(row) : 레코드(record) or 튜플
 
-![image-20220309231840546](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309231840546.png)
+![image-20220309231840546](Django2(Model).assets/image-20220309231840546-16468391627251.png)
 
-![image-20220309231911547](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309231911547.png)
+![image-20220309231911547](Django2(Model).assets/image-20220309231911547-16468392009182.png)
 
-![image-20220309231932764](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309231932764.png)
+![image-20220310002106285](Django2(Model).assets/image-20220310002106285.png)
 
-![image-20220309231953418](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309231953418.png)
+![image-20220309231932764](Django2(Model).assets/image-20220309231932764-16468392059693.png)
+
+![image-20220309231953418](Django2(Model).assets/image-20220309231953418-16468392210244.png)
 
 ---
 
@@ -53,7 +55,7 @@
 
   결과적으로 우리는 **DB를 객체(object)로 조작하기 위해** ORM을 사용한다
 
-![image-20220309232354835](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309232354835.png)
+![image-20220309232354835](Django2(Model).assets/image-20220309232354835-16468392820175.png)
 
 ### 3.1. ORM의 장점과 단점
 
@@ -66,7 +68,7 @@
 
 ### 3.2. models.py 작성
 
-![image-20220309232939647](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309232939647.png)
+![image-20220309232939647](Django2(Model).assets/image-20220309232939647-16468393139306.png)
 
 * 각 모델은 django.models.Model 클래스의 서브 클래스로 표현됨
   * django.db.models 모듈의 Model 클래스를 상속받음
@@ -127,7 +129,7 @@
 
     <실행 예시>
 
-    ![image-20220309234840420](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309234840420.png)
+    ![image-20220309234840420](Django2(Model).assets/image-20220309234840420-16468393210477.png)
 
     실제 데이터베이스에 전달되는 SQL문
 
@@ -142,16 +144,15 @@
 
     <실행 예시>
 
-    ![image-20220309234953404](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309234953404.png)
+    ![image-20220309234953404](Django2(Model).assets/image-20220309234953404-16468393246458.png)
 
     [X]된 파일들은 적용된 상태
 
 ### 4.2. model 수정
 
-![image-20220309235320316](C:\Users\JinYunTae\AppData\Roaming\Typora\typora-user-images\image-20220309235320316.png)
+![image-20220309235320316](Django2(Model).assets/image-20220309235320316-16468393277519.png)
 
 추가 필드 작성 후 makemigrations -> migrate 과정을 진행해주어야 데이터베이스에 반영됨
 
 * DateTimeField(auto_now_add=True)
 * DateTimeField(auto_now=True)
-
