@@ -154,5 +154,41 @@
 
 추가 필드 작성 후 makemigrations -> migrate 과정을 진행해주어야 데이터베이스에 반영됨
 
-* DateTimeField(auto_now_add=True)
-* DateTimeField(auto_now=True)
+#### DateField's options
+
+* **auto_now_add** (default값이 필수로 필요함)
+  * 최초로 생성된 날짜와 시간을 저장(테이블에 어떤 값을 최초로 넣을 때)
+  * Django ORM이 최초 insert(테이블에 데이터 입력)시에만 현재 날짜와 시간으로 갱신
+* **auto_now**
+  * 최종 수정된 날짜와 시간을 저장
+  * Django ORM이 save를 할 때마다 현재 날짜와 시간으로 갱신
+
+#### DateTimeField가 아닌 DateField의 options를 확인한 이유
+
+* DateTimeField는 Datefield와 동일한 추가 인자(extra argument)를 사용함
+
+* DateTimeField는 Datefield의 서브클래스임
+
+  ![image-20220313234329009](Django2(Model).assets/image-20220313234329009.png)
+
+#### default 값이 필요한 경우
+
+실행하면서 어떤 기본값을 설정할 것인지 질문하는 단계가 나타남
+
+![image-20220313232931858](Django2(Model).assets/image-20220313232931858.png)
+
+* 1번 : django에서 기본으로 설정해주는 기본값 사용하기
+* 2번 : 실행을 종료하고 직접 입력하기
+
+---
+
+## 5. Datebase API
+
+* **DB를 조작하기 위한 도구**
+* Django가 기본적으로 ORM을 제공함에 따른 것으로 DB를 편하게 조작할 수 있도록 도움
+* Model을 만들면 Django는 객체들을 만들고 읽고 수정하고 지울 수 있는 database-abstract API를 자동으로 만듦
+* database-abstract API 혹은 data-access API 라고도 함
+
+### 5.1. DB API 구문 - Making Queries
+
+![image-20220313234814558](Django2(Model).assets/image-20220313234814558.png)
