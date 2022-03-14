@@ -192,3 +192,47 @@
 ### 5.1. DB API 구문 - Making Queries
 
 ![image-20220313234814558](Django2(Model).assets/image-20220313234814558.png)
+
+### 5.2. DB API
+
+* Manager
+  * Django 모델에 데이터베이스 query 작업이 제공되는 인터페이스
+  * 기본적으로 모든 Django 모델 클래스에 objects라는 Manager를 추가
+* QuerySet
+  * 데이터 베이스로부터 전달받은 객체 목록
+  * queryset안의 객체는 0개, 1개 혹은 여러 개일 수 있음
+  * 데이터베이스로부터 조회, 필터, 정렬 등을 수행 할 수 있음
+
+### 5.3. Django shell
+
+* 일반 Python shell을 통해서는 장고 프로젝트 환경에 접근할 수 없음
+* 그래서 장고 프로젝트 설정이 load도니 Python shell을 활용해 DB API 구문 테스트 진행
+* 기본 Django shell 보다 더 많은 기능을 제공하는 shell_plus를 사용해서 진행
+  * Django-extensions 라이브러리의 기능 중 하나
+
+#### [실습]
+
+* 라이브러리 설치
+
+![image-20220314232512367](Django2(Model).assets/image-20220314232512367.png)
+
+More powerful interactive shell을 위한 2가지 라이브러리 설치
+
+* 라이브러리 등록 및 실행
+
+![image-20220314232618782](Django2(Model).assets/image-20220314232618782.png)
+
+앱 등록 후 shell_plus 실행
+
+![image-20220314232647997](Django2(Model).assets/image-20220314232647997.png)
+
+shell_plus 실행 화면
+
+---
+
+## 6. CRUD
+
+* 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인
+
+  Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말
+
