@@ -236,3 +236,68 @@ shell_plus 실행 화면
 
   Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말
 
+### 6.1. 실습
+
+#### CREATE
+
+CREATE 관련 메서드
+
+* save() method
+  * Saving objects
+  * 객체를 데이터베이스에 저장함
+  * 데이터 생성 시 save()를 호출하기 전에는 ID 값이 무엇인지 알 수 없음
+    * ID 값은 Django가 아니라 DB에서 계산되기 때문
+  * 단순히 모델을 인스턴스화 하는 것이 DB에 영향을 미치지 않기 때문에 반드시 save()가 필요
+
+1. 인스턴스 생성 후 인스턴스 변수 설정
+
+![image-20220321230913299](Django2(Model).assets/image-20220321230913299.png)
+
+2. 초기값과 함께 인스턴스 생성
+
+![image-20220321231010961](Django2(Model).assets/image-20220321231010961.png)
+
+3. QuerySet API - create() 사용
+
+![image-20220321231106546](Django2(Model).assets/image-20220321231106546.png)
+
+#### 테이블 확인
+
+실제로 저장 되었는지 확인
+
+![image-20220321231305156](Django2(Model).assets/image-20220321231305156.png)
+
+#### READ
+
+READ 관련 method
+
+* QuerySet API method를 사용해 다양한 조회를 하는 것이 중요
+* QuerySet API method는 크게 2가지로 분류
+  1. Methods that return new querysets
+  2. Methods that do not return querysets
+
+1. 현재 QuerySet의 복사본을 반환
+
+![image-20220321232447355](Django2(Model).assets/image-20220321232447355.png)
+
+​	전체 article 객체 조회
+
+![image-20220321231212716](Django2(Model).assets/image-20220321231212716.png)
+
+2. get()
+   * 주어진 lookup 매개변수와 일치하는 객체를 반환
+   * 객체를 찾을 수 없으면 DoesNotExist 예외를 발생시키고, 둘 이상의 객체를 찾으면 MultipleObjectsReturned 예외를 발생시킴
+   * 위와 같은 특징을 가지고 있기 때문에 primary key와 같이 고유(unique)성을 보장하는 조회에서 사용해야 함
+
+![image-20220321232927676](Django2(Model).assets/image-20220321232927676.png)
+
+3. filter()
+   * 주어진 lookup 매개변수와 일치하는 객체를 포함하는 새 QuerySet을 반환
+
+![image-20220321233931494](Django2(Model).assets/image-20220321233931494.png)
+
+#### str method
+
+![image-20220321231857806](Django2(Model).assets/image-20220321231857806.png)
+
+표준 파이썬 클래스의 메소드인 str()을 정의하여 각각의 object가 사람이 읽을 수 있는 문자열을 반환(return)하도록 할 수 있음 (주의! 작성 후 반드시 shell_plus를 재시작해야 반영됨)
