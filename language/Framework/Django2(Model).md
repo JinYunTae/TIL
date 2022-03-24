@@ -301,3 +301,34 @@ READ 관련 method
 ![image-20220321231857806](Django2(Model).assets/image-20220321231857806.png)
 
 표준 파이썬 클래스의 메소드인 str()을 정의하여 각각의 object가 사람이 읽을 수 있는 문자열을 반환(return)하도록 할 수 있음 (주의! 작성 후 반드시 shell_plus를 재시작해야 반영됨)
+
+#### UPDATE
+
+article 인스턴스 객체의 인스턴스 변수의 값을 변경 후 저장
+
+![image-20220324233208207](Django2(Model).assets/image-20220324233208207.png)
+
+#### DELETE
+
+* delete()
+  * QuerySet의 모든 행에 대해 SQL 삭제 쿼리를 수행하고, 삭제된 객체 수와 객체 유형당 삭제 수가 포함된 딕셔너리를 반환
+
+![image-20220324233350050](Django2(Model).assets/image-20220324233350050.png)
+
+### 6.2. Field lookups
+
+* 조회 시 특정 검색 조건을 지정
+* QuerySet 메서드 filter(), exclude() 및 get()에 대한 키워드 인수로 지정됨
+* 사용 예시)
+  * Article.objects.filter(pk__gt=2)
+  * Article.objects.filter(content__contains='ja')
+
+### 6.3. QuerySet API
+
+* 데이터베이스 조작을 위한 다양한 QuerySet API methods는 해당 공식문서를 반드시 참고하여 학습할 것
+* https://docs.Djangoproject.com/en/3.2/ref/models/querysets/#queryset-api-reference
+
+---
+
+## 7. Admin Site
+
