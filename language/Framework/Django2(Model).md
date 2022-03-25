@@ -332,3 +332,16 @@ article 인스턴스 객체의 인스턴스 변수의 값을 변경 후 저장
 
 ## 7. Admin Site
 
+* 사용자가 아닌 서버의 관리자가 활용하기 위한 페이지
+* Model class를 admin.py에 등록하고 관리
+* django.contrib.auth 모듈에서 제공 됨
+* record 생성 여부 확인에 매우 유용하며, 직접 record를 삽입할 수도 있음
+
+### 7.1. admin 생성
+
+![image-20220325234357988](Django2(Model).assets/image-20220325234357988.png)
+
+* 관리자 계정 생성 후 서버를 실행한 다음 '/admin'으로 가서 관리자 페이지 로그인
+  * 계정만 만든 경우 Django 관리자 화면에서 아무 것도 보이지 않음
+* 내가 만든 Model을 보기 위해서는 admin.py에 작성하여 Django 서버에 등록
+* [주의] auth에 관련된 기본 테이블이 생성되지 않으면 관리자 계정을 생성할 수 없음
