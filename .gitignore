@@ -2,9 +2,10 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,windows
 ###Personal###
 .gitignore
-README.pdf
 !README.pdf
 !readme.pdf
+A반_월말평가_시험_가이드.pdf
+*.pdf
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
